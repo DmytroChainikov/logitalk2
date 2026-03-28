@@ -2,6 +2,7 @@ from customtkinter import *
 from socket import *
 from threading import Thread
 
+
 class MainWindow(CTk):
     def __init__(self, name, sock: socket):
         super().__init__()
@@ -11,7 +12,6 @@ class MainWindow(CTk):
         self.geometry('800x600')
         self.title('LogiTalk')
         
-        # CTkOptionMenu, CTkButton (2 штуки), CTkScrollableFrame, CtkEntry
         self.btn_send = CTkButton(self, width=50, height=40, text='✈', command=self.send_message) # кнопка для відправки повідомлення, при натисканні викликає метод send_message
         
         self.btn_open = CTkButton(self, width=50, height=40, text='📁') # кнопка для відкриття файлів
